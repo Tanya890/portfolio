@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        PORTFOLIO WEBSITE
+    </title>
+    <link rel=" stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c245878e81.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> CSE-CSF student </p>
+                <h1> Hi, I'm <span>Tanya</span><br>UPES</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- -----------------about---------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                     <img src="tanya4.png"> 
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, my name is Tanya Gupta. I'm a second year student at University of Petroleum of Energy and Studies(Dehradun) pursuing B. TechComputer Science(Specialization in Cyber Security) . I have completed my high School education from Sawan Public School, Sirsa . My hobby include basketball, badminton, gardening, photography and traveling.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certification')">Certification</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <br><span>Programming:</span> Python, Java, C<br>
+                                <span>Web Development:</span> HTML, CSS, JS<br>
+                                <span>Cybersecurity</span> 
+                                <span>Tools:</span> Wireshark, Nmap, Metasploit, Burp Suite,
+                                Kali Linux, MongoDB, Docker, Pandas, NumPy<br>
+                                <span>Concepts:</span> DSA, OS, DBMS, Kubernetes</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br>7.2/10 <br>B.tech CSE-CSF, UPES, Dehradun</li>
+                            <li><span>2021</span><br>90.2% <br>Class 12, CBSE, Sawan Public School, Sirsa </li>
+                            <li><span>2019</span><br>89.6% <br>Class 10, CBSE, The Sirsa School, Sirsa</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certification">
+                        <ul>
+                            <li><span>CompTIA Secutity+</span> <br>December 2024- December 2027</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+<!-- ----------------------------- -->    
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">MORE ABOUT ME</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="certification.jpg">
+                <div class="layer">
+                    <h3>CompTIA Security+ Certification </h3>
+                    <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                </div>
+            </div>
+            <div class="work">
+                <img src="background9.jpg">
+                <div class="layer">
+                    <h3></h3>
+                    <p>Multi-media Steganography</p> 
+                    <a href="https://github.com/Tanya890/multimedia_stegano"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
+                </div>
+            </div>
+            <div class="work">
+                <img src="background9.jpg">
+                <div class="layer">
+                    <p>Task Streak: Mobile Application </p>
+                    <a href="https://github.com/Tanya890/task_streak"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
+                </div>
+            </div>
+        </div>
+        <!-- <a href="#" class="btn">See More</a> -->
+    </div>
+</div>
+
+
+
+<!-- ---------------contact-------------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"> Contact Me </h1>
+                <p><i class="fa-solid fa-paper-plane"></i>tanyagupta8901@gmail.com<br> +91 8930167987</p>
+                <!-- <p><i class="fa-solid fa-phone"></i>987654321</p> -->
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/tanyagupta898/"><i class="fab fa-instagram"></i> </a>
+                    <a href="https://www.linkedin.com/in/tanya-gupta-05047a226"><i class="fab fa-linkedin"></i></a> 
+                </div> 
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email Address" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+                    <button type="submit" class="btn btn2">SUBMIT</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-solid fa-copyright"></i> TANYA. Made by Tanya Gupta</p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.left = "0";
+    }
+    function closemenu(){
+        sidemenu.style.left = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyum-cSAQvRVXa1dihSh7_4qRPkDAvdMJGmWMdON3VqxRnRaAerF3Lq6v7PJPm8m2iY/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML ="Message sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
